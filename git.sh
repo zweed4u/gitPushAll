@@ -28,7 +28,8 @@ sleep .5
 
 
 
-
+#Make .gitignore here and write "git.sh" to it 
+#instead of for loop
 for file in .* *
 do 
 	if [[ $file == "git.sh" ]]; then
