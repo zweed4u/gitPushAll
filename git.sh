@@ -27,20 +27,8 @@ echo -e "local repo created"
 sleep .5
 
 
-
-#Make .gitignore here and write "git.sh" to it 
-#instead of for loop
-for file in .* *
-do 
-	if [[ $file == "git.sh" ]]; then
-		: #Don't add THIS script to repo	
-	elif [[ $file == ".git" ]]; then
-		: #Don't add the init folder
-	else
-		echo $file 'added...'
-		git add "$file"
-	fi
-done
+echo git.sh > .gitignore
+git add .
 
 
 
@@ -51,7 +39,7 @@ read repo_Name
 echo Commit name?
 read commit_Name
 
-
+#just in case...
 git rm --cached git.sh
 
 git commit -m $commit_Name
