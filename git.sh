@@ -27,7 +27,10 @@ echo -e "local repo created"
 sleep .5
 
 
-echo git.sh > .gitignore
+echo '*~' >> .gitignore
+echo git.sh >> .gitignore
+
+
 git add .
 
 
